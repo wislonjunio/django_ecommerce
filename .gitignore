@@ -6,3 +6,4 @@ bin/
 lib/
 pyvenv.cfg
 e_commerce/__pycache__/views.cpython-39.pyc
+!**/__pycache__/
