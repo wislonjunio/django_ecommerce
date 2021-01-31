@@ -9,7 +9,7 @@ from .views import home_page, about_page, contact_page, login_page, register_pag
 
 urlpatterns = [
     path('', home_page),
-    path('about/', about_page),
+    path('about/', about_page), 
     path('contact/', contact_page),
     path('login/', login_page),
     path('register/', register_page),
