@@ -47,7 +47,7 @@ class RegisterForm(forms.Form):
     email = forms.EmailField()
     password = forms.CharField(widget=forms.PasswordInput)
     password2 = forms.CharField(
-        label='Confirm password', widget=forms.PasswordInput)
+        label='Senha Confirmada', widget=forms.PasswordInput)
 
     def clean_username(self):
         username = self.cleaned_data.get('username')
