@@ -7,18 +7,18 @@ from .forms import ContactForm, LoginForm, RegisterForm
 
 def home_page(request):
     context = {
-        "title": "Home Page",
-        "content": "Bem vindo a Home Page",
+        "title": "Página Principal",
+        "content": "Bem Vindo à Periféricos DF",
     }
     if request.user.is_authenticated:
-        context["premium_content"] = "Você é um usuário Premium"
+        context["premium_content"] = "Você é um Usuário Vip da Periféricos DF"
     return render(request, "home_page.html", context)
 
 
 def about_page(request):
     context = {
-        "title": "About Page",
-        "content": "Bem vindo a About Page"
+        "title": "Sobre a Página",
+        "content": "Bem Vindo à Nossa Página"
     }
     return render(request, "about/view.html", context)
 
@@ -26,8 +26,8 @@ def about_page(request):
 def contact_page(request):
     contact_form = ContactForm(request.POST or None)
     context = {
-        "title": "Contact Page",
-        "content": "Bem vindo a Contact Page",
+        "title": "Página de Contato",
+        "content": "Bem Vindo a Página de Contato",
         "form": contact_form
     }
     if contact_form.is_valid():
@@ -52,12 +52,12 @@ def login_page(request):
         if user is not None:
             # print(request.user.is_authenticated)
             login(request, user)
-            print("Login válido")
+            print("Login Válido")
             # Redireciona para uma página de sucesso.
             return redirect("/")
         else:
             # Retorna uma mensagem de erro de 'invalid login'.
-            print("Login inválido")
+            print("Login Inválido")
     return render(request, "auth/login.html", context)
 
 

@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    {% include 'base/navbar.html' %}
+    {% include 'base/navbar.html' with nome_da_marca='Sua Loja virtual' %}
     {% block content %} {% endblock %}
     {% include 'base/js.html' %}
 </body>
